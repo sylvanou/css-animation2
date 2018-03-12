@@ -1,0 +1,49 @@
+body {
+    margin: 0 auto;
+    height: 100vh;
+    /* overflow: hidden; */
+}
+
+.container {
+  z-index: 1;
+  background: url(../sprite/stars.png) 0 0 repeat;
+  width: 100%;
+  height: 14336px;
+  background-size: 100% 8000px;
+  position: absolute;
+}
+
+@keyframes background {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -8000px;
+  }
+}
+
+.dragon{
+  left: 0;
+  right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: fixed;
+    z-index: 10;
+    background: url('../sprite/dragon.png') 0 0 no-repeat;
+    width: 256px;
+    height: 256px; 
+    background-size: 14336px 2048px;
+    /* animation: fly 6s steps(56) infinite; */
+    /* 56 steps 8 rows */
+}
+
+@keyframes fly {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    transform: translateX(-200px);
+    background-position: -14336px 0px;
+  }
+}
